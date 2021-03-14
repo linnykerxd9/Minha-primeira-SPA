@@ -1,27 +1,13 @@
-# Minhaspa
+## Minha primeira SPA(Single-page application)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
+Seja bem vindo ao meu repositório Git, Fiz essa Spa por conta do projeto da Digital Innovation One.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Eu fiz esse projeto pensando em algo simples como uma página de início simples e bonita onde à partir dela você iria para a página que de fato faria as coisas.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+No app.component.html eu coloquei a navbar e o footer fixos e entre eles, eu coloquei o Router-outlet para que apenas o meio da página mudasse dependendo da rota.
 
-## Build
+Incrivelmente tudo nesse projeto estava dando errado mas depois de muita tentativa e erro ele  ficou pronto e eu fiquei muito orgulhoso, na página de tabelas existem 2 tabelas, uma tabela onde se é inserido os valores de compromisso e outra que é mostrada os compromissos inseridos(a segunda tabela só é mostrada quando se existe algum valor inserido) e contendo um filtro para pesquisa, para fazer a tabela onde é mostrado os compromissos eu usei o Angular Material onde ele ja vem com o filtro embutido.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Ao todo é uma aplicação bem simples mas espero que gostem. 
