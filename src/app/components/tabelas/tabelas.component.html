@@ -1,0 +1,83 @@
+<div class="container-fluid">
+    <div class="container">
+        <h2 id="titulo">Crie Sua tabela</h2>
+      <div class="divTableCenter">
+        <div class="divCreateTables" id="createTables">
+          <form    (ngSubmit)="submit()">
+            <table>
+              <thead>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Data da criação</th>
+                <th>Data do Compromisso</th>
+              </thead>
+            <tbody>
+                <td>
+                  <app-input-text controlName="nome"  [formGroup]="cadastro" ></app-input-text>
+              </td>
+              <td>
+              <app-input-textarea controlName="descricao"  [formGroup]="cadastro"></app-input-textarea>
+              </td>
+              <td>
+                <app-input-date-picker controlName="dateInicial" titulo="Data da Criação"  [formGroup]="cadastro"></app-input-date-picker>
+              </td>
+              <td>
+                <app-input-date-picker controlName="dateFinal" titulo="Data do Compromisso" [formGroup]="cadastro"></app-input-date-picker>
+              </td>
+            </tbody>
+            </table>
+            <div class="divBtnCreateTables">
+              <button id="btnCreateTables" mat-raised-button color="primary" class="submit" >
+                Criar Tabela
+              </button>
+            </div>
+          </form>
+        </div>
+    </div>
+
+<ng-container *ngIf="tabelasPreenchida">
+      <div class="divTables">
+        <mat-form-field id="form-do-filter">
+          <mat-label>Filter: Nome</mat-label>
+          <input  matInput (keyup)="applyFilter($event)"
+                  placeholder="Exemplo= 'Trabalho'"
+                  #inputFilter
+                  >
+        </mat-form-field>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" id="mostrar-table">
+              <!--A coluna do nome -->
+            <ng-container matColumnDef="nome">
+              <th mat-header-cell *matHeaderCellDef> Nome </th>
+              <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+            </ng-container>
+
+            <!--A coluna da descrição -->
+            <ng-container matColumnDef="descricao">
+              <th mat-header-cell *matHeaderCellDef> Descrição </th>
+              <td mat-cell *matCellDef="let element">
+                {{element.descricao}}
+              </td>
+            </ng-container>
+            <!-- A coluna da criação -->
+            <ng-container matColumnDef="dateInicial">
+              <th mat-header-cell *matHeaderCellDef> Data Inicial </th>
+              <td mat-cell *matCellDef="let element"> {{element.dateInicial | date: 'dd/MM/yyyy'}} </td>
+            </ng-container>
+            <!-- A coluna da criação -->
+            <ng-container matColumnDef="dateFinal">
+              <th mat-header-cell *matHeaderCellDef> Data Final </th>
+              <td mat-cell *matCellDef="let element"> {{element.dateFinal | date: 'dd/MM/yyyy'}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            <!-- Row shown when there is no matching data. -->
+            <tr class="mat-row" *matNoDataRow>
+              <td class="mat-cell" colspan="4">Não foi encontrado nada com: "{{inputFilter.value}}"</td>
+            </tr>
+        </table>
+    </div>
+  </ng-container>
+</div>
+

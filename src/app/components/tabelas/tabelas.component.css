@@ -1,0 +1,88 @@
+/*Importando a fonte do google para o titulo*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap');
+
+
+.container-fluid{
+  width:100%;
+  height:100%;
+  background-image: url(../../../assets/img/backgroundHome2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top:7%;
+  display:inline-table;
+}
+.container{
+  width:80%;
+  margin-left:10%;
+  margin-right:10%;
+}
+#titulo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  color:#90a4ae;
+  letter-spacing: 1px;
+  font-size: 42px;
+  margin-bottom: 41px;
+}
+div.divCreateTables table thead th{
+  border-bottom: 1px solid black!important;
+  padding-bottom: 11px;
+  background-color: bisque;
+  font-size:17px;
+  padding-top:2px;
+  border-right: 1px solid black;
+}
+div.divCreateTables table tbody td{
+  padding-top: 15px;
+  border-left: 15px solid transparent;
+
+}
+div.divCreateTables table tbody td:nth-child(4){
+  border-right: 15px solid transparent;
+}
+table{
+  background-color:#ece9e987;
+  border-radius: 2px;
+  border-spacing: 0;
+}
+.divTableCenter{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.divCreateTables{
+  border-radius: 5px;
+  background-color: white;
+  width:auto;
+  margin-bottom:40px;
+  box-shadow: 4px 3px 6px 1px black;
+  display:grid;
+}
+.divBtnCreateTables{
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  background-color:#ece9e987;
+}
+.divTables{
+    border-radius: 5px;
+    background-color: white;
+    width:100%;
+    height:auto;
+    margin-bottom:20px;
+    box-shadow: 4px 3px 6px 1px black;
+}
+#mostrar-table{
+  width:100%;
+  margin-bottom: 40px;
+
+}
+#form-do-filter{
+  width:30%!important;
+  margin-top:20px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}

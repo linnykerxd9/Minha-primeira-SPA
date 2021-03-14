@@ -1,0 +1,22 @@
+
+<mat-sidenav-container class="sidenav-menu-container" (backdropClick)="close('backdrop')">
+  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+    <p><button (click)="close('toggle button')" class="btnHomeMenu" [routerLink]="['/home']">
+      Home
+    </button></p>
+    <p><button (click)="close('toggle button')"[routerLink]="['/tabela']">
+      Tabelas
+  </button></p>
+  </mat-sidenav>
+
+    <mat-sidenav-content>
+      <mat-toolbar>
+      <button mat-icon-button class="btnToolbar"  (click)="sidenav.open()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>My Tables</span>
+    </mat-toolbar>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
+

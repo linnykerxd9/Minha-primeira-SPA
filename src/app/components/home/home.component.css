@@ -1,0 +1,55 @@
+/*Importando a fonte do google para o titulo*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap');
+
+.container-fluid{
+  width:100%;
+  height:100%;
+  background-color: #bdbdbd;
+  background-image: url(../../../assets/img/backgroundHome2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 40px;
+}
+.titulo{
+  padding-top:4%;
+  margin-bottom:4%;
+  width:57%;
+  justify-self: center;
+  font-size:40px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  color:#90a4ae;
+  letter-spacing: 1px;
+}
+.container{
+  margin-left:12% ;
+  margin-right: 12%;
+  width:75%;
+  display:grid;
+  justify-content: center;
+}
+.fotoHome{
+  width:688px;
+  height:400px;
+  border-radius: 3px;
+  box-shadow: 7px 9px 9px 4px black;
+  justify-self: center;
+}
+.divComo-e-facil{
+  display:grid;
+  justify-content: center;
+  align-items: center;
+}
+.titutloComoFacil{
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 22px;
+    margin-top: 27%;
+    color:#87b4ca;
+}
+#comecarAgora{
+  display:grid;
+  justify-content: center;
+  color:#87b4ca;
+  font-size: 15px;
+}

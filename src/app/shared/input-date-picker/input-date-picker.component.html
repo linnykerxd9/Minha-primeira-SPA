@@ -1,0 +1,14 @@
+
+<div [formGroup]="formGroup">
+  <mat-form-field color="blue" appearance="fill" >
+    <mat-label>{{titulo}}</mat-label>
+    <input matInput
+          readonly
+          [matDatepicker]="pickerCriacao"
+          (click)="pickerCriacao.open()"
+          [name]="controlName"
+          [formControlName]="controlName">
+      <mat-datepicker-toggle matSuffix [for]="pickerCriacao"></mat-datepicker-toggle>
+      <mat-datepicker #pickerCriacao></mat-datepicker>
+  </mat-form-field>
+</div>
